@@ -30,9 +30,10 @@ def baca_data(nama_file):
 
          # Mengambil UKM dari kolom terakhir
         ukm = kolom[3 + jumlah_dimensi]
+        izin = kolom[4 + jumlah_dimensi]
 
         # Membuat dan menyimpan objek mahasiswa
-        daftar.append(Mahasiswa(nama, prodi, angkatan, rating, ukm))
+        daftar.append(Mahasiswa(nama, prodi, angkatan, rating, ukm, izin))
     
     return daftar
 

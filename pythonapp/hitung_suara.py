@@ -35,28 +35,3 @@ def hitung_suara(tetangga):
                 hasil[j + 1] = sementara
 
     return hasil
-
-
-# Contoh data tetangga
-tetangga = [
-    {"ukm": "English Club"},
-    {"ukm": "Robotic"},
-    {"ukm": "English Club"},
-    {"ukm": "English Club"}, 
-    {"ukm": "Aksara"},
-    {"ukm": "Robotic"},
-    {"ukm": "English Club"},
-    {"ukm": "Aksara"}
-]
-
-# Menjalankan fungsi
-hasil = hitung_suara(tetangga)
-
-# Menampilkan hasil rekomendasi
-print("HASIL REKOMENDASI UKM")
-print("-" * 45)
-print(f"{'Nama UKM':<20} {'Suara':<8} {'Persen'}")
-print("-" * 45)
-
-for ukm, suara, persen in hasil:
-    print(f"{ukm:<20} {suara:<8} {persen:.2f}%")

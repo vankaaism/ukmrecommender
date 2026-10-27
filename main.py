@@ -3,6 +3,7 @@ from pythonapp.Call_question import minta_rating
 from pythonapp.eucledian import cari_mirip
 from pythonapp.hitung_suara import hitung_suara
 from pythonapp.hasil import tampilkan_hasil
+from pythonapp.anggota_mirip import tampilkan_anggota
 
 
 def main():
@@ -15,6 +16,7 @@ def main():
     anggota = cari_mirip(data, rating_user, 5)
     suara = hitung_suara(anggota)
     tampilkan_hasil(suara)
+    tampilkan_anggota(anggota)
 
 
 if __name__ == "__main__":

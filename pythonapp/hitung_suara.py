@@ -4,7 +4,7 @@ def hitung_suara(tetangga):
     jumlah = []
 
     for tetangga_i in tetangga:
-        ukm = tetangga_i["ukm"]
+        ukm = tetangga_i.ukm
 
         if ukm in nama_ukm:
             posisi = nama_ukm.index(ukm)

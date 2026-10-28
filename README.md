@@ -38,7 +38,7 @@ Pernyataan-pernyataan ini adalah adaptasi sederhana untuk keperluan program, buk
 
 ## Cara Kerja
 
-1. Program membaca data anggota UKM dari data/anggota.csv.
+1. Program membaca data anggota UKM dari `data/anggota.csv`.
 2. Pengguna menjawab 12 pernyataan dengan skala 1 sampai 5.
 3. Program menghitung jarak Euclidean antara jawaban pengguna dan jawaban setiap anggota. Makin kecil jaraknya, makin mirip minatnya.
 4. Lima anggota dengan jarak terkecil dipilih.
@@ -48,7 +48,7 @@ Pernyataan-pernyataan ini adalah adaptasi sederhana untuk keperluan program, buk
 
 ## Privasi
 
-Setiap anggota punya kolom izin di data. Nama dan prodi anggota hanya ditampilkan jika ia menjawab ya. Jika menjawab tidak, ia tetap ikut dihitung dalam rekomendasi, tetapi ditampilkan tanpa identitas, hanya UKM-nya.
+Setiap anggota punya kolom `izin` di data. Nama dan prodi anggota hanya ditampilkan jika ia menjawab `ya`. Jika menjawab `tidak`, ia tetap ikut dihitung dalam rekomendasi, tetapi ditampilkan tanpa identitas, hanya UKM-nya.
 
 Seluruh data di repo ini adalah data dummy, bukan data mahasiswa sungguhan.
 
@@ -59,65 +59,65 @@ Panduan ini ditulis untuk yang belum pernah menjalankan program Python sama seka
 ### Langkah 1: Pasang Python
 
 1. Buka https://www.python.org/downloads/
-2. Klik tombol *Download Python* (versi 3 apa pun bisa).
+2. Klik tombol **Download Python** (versi 3 apa pun bisa).
 3. Jalankan file yang terunduh.
-   - *Windows:* di jendela pertama, *centang "Add python.exe to PATH"* sebelum klik *Install Now*. Langkah ini penting. Tanpa itu, perintah python tidak akan dikenali.
-   - *macOS:* ikuti petunjuk pemasangan sampai selesai.
+   - **Windows:** di jendela pertama, **centang "Add python.exe to PATH"** sebelum klik **Install Now**. Langkah ini penting. Tanpa itu, perintah `python` tidak akan dikenali.
+   - **macOS:** ikuti petunjuk pemasangan sampai selesai.
 
 Cek apakah Python sudah terpasang dengan membuka terminal:
 
-- *Windows:* tekan tombol Windows, ketik cmd, tekan Enter.
-- *macOS:* tekan Cmd + Spasi, ketik Terminal, tekan Enter.
+- **Windows:** tekan tombol Windows, ketik `cmd`, tekan Enter.
+- **macOS:** tekan `Cmd + Spasi`, ketik `Terminal`, tekan Enter.
 
 Lalu ketik:
 
-
+```
 python --version
+```
 
-
-Di macOS, gunakan python3 --version. Kalau muncul tulisan seperti Python 3.12.0, Python sudah siap.
+Di macOS, gunakan `python3 --version`. Kalau muncul tulisan seperti `Python 3.12.0`, Python sudah siap.
 
 ### Langkah 2: Unduh program
 
 1. Buka halaman repo ini di GitHub.
-2. Klik tombol hijau *Code, lalu pilih **Download ZIP*.
-3. Ekstrak file ZIP yang terunduh (klik kanan, lalu *Extract All* di Windows, atau klik dua kali di macOS).
-4. Akan muncul folder bernama ukmrecommender-main.
+2. Klik tombol hijau **Code**, lalu pilih **Download ZIP**.
+3. Ekstrak file ZIP yang terunduh (klik kanan, lalu **Extract All** di Windows, atau klik dua kali di macOS).
+4. Akan muncul folder bernama `ukmrecommender-main`.
 
 ### Langkah 3: Buka terminal di folder program
 
-*Windows:* buka folder ukmrecommender-main di File Explorer, klik kolom alamat di bagian atas, ketik cmd, lalu tekan Enter. Terminal langsung terbuka di folder itu.
+**Windows:** buka folder `ukmrecommender-main` di File Explorer, klik kolom alamat di bagian atas, ketik `cmd`, lalu tekan Enter. Terminal langsung terbuka di folder itu.
 
-*macOS:* di Terminal, ketik cd ` (dengan spasi setelahnya), seret folder `ukmrecommender-main ke jendela Terminal, lalu tekan Enter.
+**macOS:** di Terminal, ketik `cd ` (dengan spasi setelahnya), seret folder `ukmrecommender-main` ke jendela Terminal, lalu tekan Enter.
 
-Pastikan kamu berada di folder yang benar dengan mengetik dir (Windows) atau ls (macOS). Harus terlihat main.py, data, pythonapp, dan tests.
+Pastikan kamu berada di folder yang benar dengan mengetik `dir` (Windows) atau `ls` (macOS). Harus terlihat `main.py`, `data`, `pythonapp`, dan `tests`.
 
 ### Langkah 4: Jalankan program
 
-
+```
 python main.py
+```
 
-
-Di macOS, gunakan python3 main.py. Program akan menampilkan pertanyaan pertama. Lanjutkan ke *Panduan Pengguna* di bawah.
+Di macOS, gunakan `python3 main.py`. Program akan menampilkan pertanyaan pertama. Lanjutkan ke **Panduan Pengguna** di bawah.
 
 ### Menjalankan unit test (opsional)
 
 Dari folder yang sama:
 
-
+```
 python -m unittest discover tests
+```
 
-
-Kalau semua berhasil, di baris terakhir muncul OK.
+Kalau semua berhasil, di baris terakhir muncul `OK`.
 
 ### Jika terjadi masalah
 
 | Pesan yang muncul | Penyebab | Solusi |
 |---|---|---|
-| 'python' is not recognized... | Python belum terpasang atau "Add to PATH" tidak dicentang | Pasang ulang Python dan centang "Add python.exe to PATH", atau coba perintah py main.py |
-| command not found: python (macOS) | Di macOS perintahnya python3 | Gunakan python3 main.py |
-| FileNotFoundError: ... data/anggota.csv | Terminal tidak dibuka di folder program | Ulangi Langkah 3 sampai main.py terlihat saat mengetik dir atau ls |
-| can't open file 'main.py' | Terminal tidak dibuka di folder program | Ulangi Langkah 3 |
+| `'python' is not recognized...` | Python belum terpasang atau "Add to PATH" tidak dicentang | Pasang ulang Python dan centang "Add python.exe to PATH", atau coba perintah `py main.py` |
+| `command not found: python` (macOS) | Di macOS perintahnya `python3` | Gunakan `python3 main.py` |
+| `FileNotFoundError: ... data/anggota.csv` | Terminal tidak dibuka di folder program | Ulangi Langkah 3 sampai `main.py` terlihat saat mengetik `dir` atau `ls` |
+| `can't open file 'main.py'` | Terminal tidak dibuka di folder program | Ulangi Langkah 3 |
 
 ## Panduan Pengguna
 
@@ -135,11 +135,11 @@ Input selain angka 1 sampai 5 akan ditolak, lalu pernyataan yang sama ditanyakan
 
 | Contoh input | Hasil |
 |---|---|
-| 4 atau ` 4 ` (dengan spasi) | Diterima |
+| `4` atau ` 4 ` (dengan spasi) | Diterima |
 | kosong (langsung Enter) | Ditolak |
-| abc | Ditolak, bukan angka |
-| 0, 6 | Ditolak, di luar rentang |
-| -1, 3.5 | Ditolak, bukan bilangan bulat 1 sampai 5 |
+| `abc` | Ditolak, bukan angka |
+| `0`, `6` | Ditolak, di luar rentang |
+| `-1`, `3.5` | Ditolak, bukan bilangan bulat 1 sampai 5 |
 
 Setelah 12 pernyataan dijawab, program menampilkan rekomendasi UKM beserta persentasenya, lalu lima anggota dengan minat paling mirip.
 

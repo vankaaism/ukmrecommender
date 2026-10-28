@@ -35,3 +35,5 @@ Pertanyaan di `Call_question.py` diadaptasi dari dua kerangka teori psikologi.
 | 12 | Enhancement | menjadi lebih percaya diri dan berkembang |
 
 Pernyataan-pernyataan ini adalah adaptasi sederhana untuk keperluan program, bukan alat ukur psikologi yang sudah divalidasi.
+
+
